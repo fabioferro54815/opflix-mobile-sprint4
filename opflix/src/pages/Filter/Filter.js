@@ -48,6 +48,8 @@ class Filter extends Component {
                     keyExtractor={item => item.idLancamento}
                     renderItem={({ item }) => (
                         <View style={styles.caixa}>
+                      {item.imagem != null ? 
+                <Image source={{ uri: 'http://192.168.4.195:5000'+item.imagem }} style={styles.img}></Image> : <Image source={require('../../assets/img/cartaz-in.png')}></Image>}
                             <Text style={styles.textos}>{item.titulo}</Text>
                             <Text style={styles.textos}>{item.sinopse}</Text>
                             <Text style={styles.textos}>{item.tempoDuracao}</Text>

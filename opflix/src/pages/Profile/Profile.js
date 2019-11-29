@@ -41,7 +41,9 @@ class Profile extends Component{
                 <Text style={styles.h1}>Perfil</Text>
               </View>
               <View  style={styles.conteudo}>
-                <Image source={{uri: 'http://192.168.4.195:5000'+this.state.imagem}} style={styles.imgperfil}></Image>
+              {this.state.imagem != null ?  
+              <Image source={{uri: 'http://192.168.4.195:5000'+this.state.imagem}} style={styles.imgperfil}></Image> 
+              : <Text>Sem Imagem</Text>}
                 <View style={styles.infos}>
                   <Text style={styles.textos}>{this.state.nome}</Text>
                   <Text style={styles.textos}>{this.state.email}</Text>
